@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
+const morgan = require("morgan")
 const resolutions = require("./routes/resolutions");
 app.use(morgan('dev'));
 app.use(bodyParser.json());
