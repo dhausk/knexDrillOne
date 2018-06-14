@@ -12,7 +12,7 @@ const data = [{
   id: 3,
   dueDate: "1997-09-01",
   resolution: "Start knitting"
-}]
+}];
 exports.seed = function (knex, Promise) {
   return knex('resolution')
     .del()
