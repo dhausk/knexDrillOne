@@ -6,7 +6,6 @@ exports.up = function (knex, Promise) {
     table.text('resolution');
   })
 };
-
 exports.down = function (knex, Promise) {
   return knex.schema.dropTableIfExists('resolution')
 };
