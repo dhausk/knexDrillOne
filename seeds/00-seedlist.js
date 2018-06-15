@@ -14,8 +14,8 @@ const data = [{
   resolution: "Start knitting"
 }];
 exports.seed = function (knex, Promise) {
-  return knex('resolution')
+  return knex('resolutions')
     .del()
-    .then(() => knex('resolution').insert(data))
-    .then(() => knex.raw(`ALTER SEQUENCE resolution_id_seq RESTART WITH ${data.length + 1};`))
+    .then(() => knex('resolutions').insert(data))
+    .then(() => knex.raw(`ALTER SEQUENCE resolutions_id_seq RESTART WITH ${data.length + 1};`))
 }
